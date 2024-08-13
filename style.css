@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -35,4 +36,14 @@ body {
     font-size: 1em;
     cursor: pointer;
     background-color: #725a17;
+}
+
+header h1 {
+    margin-bottom: 20px;
+    font-size: 3em;
+}
+
+#game-result {
+    margin-top: 20px;
+    font-size: 2em;
 }

@@ -64,7 +64,8 @@ const GameController = (() => {
         const winner = checkWinner();
 
         if (winner) {
-            alert(winner === "Tie" ? "It's a tie!" : `${currentPlayer.name} wins!`);
+            document.getElementById('game-result').textContent = 
+                winner === "Tie" ? "It's a tie!" : `${currentPlayer.name} wins!`;
             isGameOver = true;
         } else {
             switchPlayer();
@@ -75,6 +76,7 @@ const GameController = (() => {
         Gameboard.resetBoard();
         currentPlayer = player1;
         isGameOver = false;
+        document.getElementById('game-result').textContent = "";
     };
 
     return { makeMove, resetGame };
@@ -107,4 +109,5 @@ const DisplayController = (() => {
 
     render();
 })();
+
 
